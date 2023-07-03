@@ -11,8 +11,18 @@
   </head>
 
   <body>
-    <%= render "layouts/navbar" %>
+    <div class="<%= @page %>-page">
+      <div class="row page-container">
+        <%= render 'layouts/links' %>
+        <div class="col-8">
+          <% unless @page == 'home' %>
+            <%= render 'layouts/title'  %>
+          <% end %>
+          <%= yield %>
+        </div>
+        <div class="col-2"></div>
+      </div>
+    </div>
     <%= render "shared/flashes" %>
-    <%= yield %>
   </body>
 </html>
