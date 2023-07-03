@@ -4,6 +4,9 @@ class PagesController < ApplicationController
   def home
   end
 
+  def creations
+  end
+
   def info
   end
 end
