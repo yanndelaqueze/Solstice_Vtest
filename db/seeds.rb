@@ -29,6 +29,7 @@ bouquet1 = Product.new(
   description: 'Lorem Ipsum Bouquet Printemps',
   min_price: 40.00,
   available: true,
+  featured: true,
   category: bouquets
 )
 bouquet1.save!
@@ -38,6 +39,7 @@ bouquet2 = Product.new(
   description: 'Lorem Ipsum Bouquet Violet',
   min_price: 30.00,
   available: true,
+  featured: true,
   category: bouquets
 )
 bouquet2.save!
@@ -47,6 +49,7 @@ bouquet3 = Product.new(
   description: 'Lorem Ipsum Bouquet Blanc',
   min_price: 25.00,
   available: true,
+  featured: true,
   category: bouquets
 )
 bouquet3.save!
@@ -63,6 +66,7 @@ deuil1 = Product.new(
   description: 'Lorem Ipsum Coussin Deuil',
   min_price: 125.00,
   available: true,
+  featured: true,
   category: deuil
 )
 deuil1.save!
@@ -72,6 +76,7 @@ deuil2 = Product.new(
   description: 'Lorem Ipsum Couronne Deuil',
   min_price: 115.00,
   available: true,
+  featured: true,
   category: deuil
 )
 deuil2.save!
@@ -88,6 +93,7 @@ mariage1 = Product.new(
   description: 'Lorem Ipsum Coussin Mariage',
   min_price: 95.00,
   available: true,
+  featured: true,
   category: mariage
 )
 mariage1.save!
@@ -97,6 +103,7 @@ mariage2 = Product.new(
   description: 'Lorem Ipsum Bouquet Mariage',
   min_price: 65.00,
   available: true,
+  featured: true,
   category: mariage
 )
 mariage2.save!
@@ -106,6 +113,7 @@ mariage3 = Product.new(
   description: 'Lorem Ipsum Livre Mariage',
   min_price: 45.00,
   available: true,
+  featured: true,
   category: mariage
 )
 mariage3.save!
@@ -115,6 +123,7 @@ mariage4 = Product.new(
   description: 'Lorem Ipsum Couronne Mariage',
   min_price: 215.00,
   available: true,
+  featured: true,
   category: mariage
 )
 mariage4.save!
@@ -131,6 +140,7 @@ orchidees1 = Product.new(
   description: 'Lorem Ipsum Orichidée blanche',
   min_price: 15.00,
   available: true,
+  featured: true,
   category: orchidees
 )
 orchidees1.save!
@@ -140,6 +150,7 @@ orchidees2 = Product.new(
   description: 'Lorem Ipsum Orichidée rose',
   min_price: 20.00,
   available: true,
+  featured: true,
   category: orchidees
 )
 orchidees2.save!
