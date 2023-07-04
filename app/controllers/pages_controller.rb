@@ -5,8 +5,8 @@ class PagesController < ApplicationController
     @page = 'home'
   end
 
-  def creations
-    @page = 'creations'
+  def shop
+    @page = 'shop'
   end
 
   def about
