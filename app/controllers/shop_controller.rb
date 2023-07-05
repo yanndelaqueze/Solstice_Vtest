@@ -3,6 +3,7 @@ class ShopController < ApplicationController
   def index
     @page = 'shop'
     @products = Product.all
+    @order_items = current_order.order_items.new
   end
 
   private
