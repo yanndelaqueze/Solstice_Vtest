@@ -1,0 +1,48 @@
+2023-07-06 12:43:27,365 [WARN ] [studio.metadata.DatabaseMetadataService] [DatabaseMetadataService.java:55]: Missing official metadata database file
+java.io.FileNotFoundException: /Users/yanndelaqueze/.studio/db/official.json (No such file or directory)
+	at java.base/java.io.FileInputStream.open0(Native Method)
+	at java.base/java.io.FileInputStream.open(FileInputStream.java:219)
+	at java.base/java.io.FileInputStream.<init>(FileInputStream.java:158)
+	at java.base/java.io.FileInputStream.<init>(FileInputStream.java:112)
+	at java.base/java.io.FileReader.<init>(FileReader.java:60)
+	at studio.metadata.DatabaseMetadataService.<init>(DatabaseMetadataService.java:42)
+	at studio.webui.MainVerticle.start(MainVerticle.java:47)
+	at io.vertx.core.AbstractVerticle.start(AbstractVerticle.java:106)
+	at io.vertx.core.Verticle.start(Verticle.java:66)
+	at io.vertx.core.impl.DeploymentManager.lambda$doDeploy$9(DeploymentManager.java:556)
+	at io.vertx.core.impl.ContextImpl.executeTask(ContextImpl.java:369)
+	at io.vertx.core.impl.EventLoopContext.lambda$executeAsync$0(EventLoopContext.java:38)
+	at io.netty.util.concurrent.AbstractEventExecutor.safeExecute(AbstractEventExecutor.java:164)
+	at io.netty.util.concurrent.SingleThreadEventExecutor.runAllTasks(SingleThreadEventExecutor.java:472)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:500)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:989)
+	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+	at java.base/java.lang.Thread.run(Thread.java:1623)
+2023-07-06 12:43:28,335 [INFO ] [studio.metadata.DatabaseMetadataService] [DatabaseMetadataService.java:193]: Fetched metadata, updating local database
+2023-07-06 12:43:28,423 [INFO ] [studio.webui.service.StoryTellerService] [StoryTellerService.java:53]: Setting up story teller driver
+2023-07-06 12:43:28,424 [DEBUG] [studio.driver.raw.RawStoryTellerAsyncDriver] [RawStoryTellerAsyncDriver.java:44]: Registering hotplug listener
+2023-07-06 12:43:28,425 [INFO ] [studio.driver.LibUsbDetectionHelper] [LibUsbDetectionHelper.java:48]: Initializing libusb...
+2023-07-06 12:43:28,428 [ERROR] [io.vertx.core.impl.launcher.commands.VertxIsolatedDeployer] [VertxIsolatedDeployer.java:77]: Failed in deploying verticle
+java.lang.ExceptionInInitializerError
+	at studio.driver.LibUsbDetectionHelper.initializeLibUsb(LibUsbDetectionHelper.java:50)
+	at studio.driver.raw.RawStoryTellerAsyncDriver.<init>(RawStoryTellerAsyncDriver.java:45)
+	at studio.webui.service.StoryTellerService.<init>(StoryTellerService.java:54)
+	at studio.webui.MainVerticle.start(MainVerticle.java:60)
+	at io.vertx.core.AbstractVerticle.start(AbstractVerticle.java:106)
+	at io.vertx.core.Verticle.start(Verticle.java:66)
+	at io.vertx.core.impl.DeploymentManager.lambda$doDeploy$9(DeploymentManager.java:556)
+	at io.vertx.core.impl.ContextImpl.executeTask(ContextImpl.java:369)
+	at io.vertx.core.impl.EventLoopContext.lambda$executeAsync$0(EventLoopContext.java:38)
+	at io.netty.util.concurrent.AbstractEventExecutor.safeExecute(AbstractEventExecutor.java:164)
+	at io.netty.util.concurrent.SingleThreadEventExecutor.runAllTasks(SingleThreadEventExecutor.java:472)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:500)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:989)
+	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+	at java.base/java.lang.Thread.run(Thread.java:1623)
+Caused by: org.usb4java.LoaderException: Native library not found in classpath: /org/usb4java/darwin-aarch64/libusb4java.dylib
+	at org.usb4java.Loader.extractLibrary(Loader.java:246)
+	at org.usb4java.Loader.load(Loader.java:323)
+	at org.usb4java.LibUsb.<clinit>(LibUsb.java:690)
+	... 16 more
